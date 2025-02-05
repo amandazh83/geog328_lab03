@@ -82,11 +82,10 @@
 
 <body>
     <main id="container">
-        <div id="table">
+        <div id="side-panel">
 
             <h2>Earthquake List</h2>
             <button onclick="sortTable()">Sort by Magnitude</button>
-            
 
             <table>
                 <tr>
@@ -101,71 +100,54 @@
 
     </main>
     <script>
+        // Define the Mapbox access token
         mapboxgl.accessToken =
-            'pk.eyJ1IjoiYW1hejA5MDIiLCJhIjoiY202cjAwcmh0MXNtaDJsb2dtMWd5Ym40ZyJ9.AwTbmvYC6M1nQbpLVRdLRw';
-        const map = new mapboxgl.Map({
+            'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
+
+        // Create the map object
+        let map = new mapboxgl.Map({
             container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/navigation-day-v1', // style URL
-            zoom: 3.5, // starting zoom
-            center: [-98.35, 39.5] // starting center
+            style: 'mapbox://styles/mapbox/satellite-v9', // style URL
+            zoom: 5.5, // starting zoom
+            center: [138, 38] // starting center
         });
 
 
         async function geojsonFetch() {
 
+            let response, earthquakes, japan, table;
+            response = await fetch('assets/earthquakes.geojson');
+            earthquakes = await response.json();
+            response = await fetch('assets/japan.json');
+            japan = await response.json();
 
-            let response = await fetch('assets/us_earthquakes.geojson');
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            let us_earthquakes = await response.json();
-
-            response = await fetch('assets/us_states.json');
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            let us_states = await response.json();
-
-
-            var table = document.getElementsByTagName("table");
-            for (let i = 0; i < us_earthquakes.features.length; i++) {
-                // console.log(earthquakes.features[i].properties.id);
-
-                var lng = await us_earthquakes.features[i].geometry.coordinates[0];
-                var lat = await us_earthquakes.features[i].geometry.coordinates[1];
-
+            table = document.getElementsByTagName("table")[0];
+            let row, cell1, cell2, cell3;
+            for (let i = 0; i < earthquakes.features.length; i++) {
                 // Create an empty <tr> element and add it to the 1st position of the table:
-                var row = table[0].insertRow(-1);
-
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var cell3 = row.insertCell(2);
-                cell1.innerHTML = await us_earthquakes.features[i].properties.id;
-                cell2.innerHTML = await us_earthquakes.features[i].properties.mag;
-                cell3.innerHTML = await new Date(us_earthquakes.features[i].properties.time).toLocaleDateString("en-US");
-
+                row = table.insertRow(-1);
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell3 = row.insertCell(2);
+                cell1.innerHTML = earthquakes.features[i].properties.id;
+                cell2.innerHTML = earthquakes.features[i].properties.mag;
+                cell3.innerHTML = new Date(earthquakes.features[i].properties.time).toLocaleDateString(
+                    "en-US");
             }
 
 
+            //load data to the map as new layers and table on the side.
+            map.on('load', function loadingData() {
 
-
-            map.on('load', () => {
-
-
-
-                map.addSource('us_earthquakes', {
+                map.addSource('earthquakes', {
                     type: 'geojson',
-                    data: us_earthquakes
+                    data: earthquakes
                 });
 
                 map.addLayer({
-                    'id': 'us_earthquakes-layer',
+                    'id': 'earthquakes-layer',
                     'type': 'circle',
-                    'source': 'us_earthquakes',
+                    'source': 'earthquakes',
                     'paint': {
                         'circle-radius': 8,
                         'circle-stroke-width': 2,
@@ -174,43 +156,35 @@
                     }
                 });
 
-                // Add states layer
-                map.addSource('us_states', {
+
+                map.addSource('japan', {
                     type: 'geojson',
-                    data: us_states
+                    data: japan
                 });
 
                 map.addLayer({
-                    'id': 'us_states-layer',
+                    'id': 'japan-layer',
                     'type': 'fill',
-                    'source': 'us_states',
+                    'source': 'japan',
                     'paint': {
-                        'fill-color': '#0080ff',
+                        'fill-color': '#0080ff', // blue color fill
                         'fill-opacity': 0.5
                     }
                 });
 
-
-
-
-
-
             });
-
-
-
 
         }
 
-        geojsonFetch()
-            .catch(e => {
-                console.log('There has been a problem with your fetch operation: ' + e.message);
-            });
+        geojsonFetch();
 
+        let btn = document.getElementsByTagName("button")[0];
 
+        btn.addEventListener('click', sortTable);
 
-        function sortTable() {
-            var table, rows, switching, i, x, y, shouldSwitch;
+        // define the function to sort table
+        function sortTable(e) {
+            let table, rows, switching, i, x, y, shouldSwitch;
             table = document.getElementsByTagName("table")[0];
             switching = true;
             /*Make a loop that will continue until
