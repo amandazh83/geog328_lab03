@@ -94,6 +94,8 @@
             let us_earthquakes = await response.json();
 
 
+            console.log('Earthquake coordinates:', us_earthquakes.features.map(f => f.geometry.coordinates));
+
             response = await fetch('assets/us_states.json');
 
             if (!response.ok) {
