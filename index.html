@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
-    <title>Load data from an external GeoJSON file</title>
+    <title>Earthquake List</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <!-- Including the Mapbox GL CSS file -->
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
+
+    <!-- Including the Mapbox GL JS file -->
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+
     <style>
         /* CSS styles for the layout and components */
 
@@ -85,7 +90,7 @@
         <div id="side-panel">
 
             <h2>Earthquake List</h2>
-            <button onclick="sortTable()">Sort by Magnitude</button>
+            <button>Sort by Magnitude</button>
 
             <table>
                 <tr>
@@ -102,36 +107,36 @@
     <script>
         // Define the Mapbox access token
         mapboxgl.accessToken =
-            'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
+            'pk.eyJ1IjoiYW1hejA5MDIiLCJhIjoiY202cjAwcmh0MXNtaDJsb2dtMWd5Ym40ZyJ9.AwTbmvYC6M1nQbpLVRdLRw';
 
         // Create the map object
         let map = new mapboxgl.Map({
             container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/satellite-v9', // style URL
-            zoom: 5.5, // starting zoom
-            center: [138, 38] // starting center
+            style: 'mapbox://styles/mapbox/light-v11', // style URL
+            zoom: 3.5, // starting zoom
+            center: [-98.35, 39.5] // starting center
         });
 
 
         async function geojsonFetch() {
 
-            let response, earthquakes, japan, table;
-            response = await fetch('assets/earthquakes.geojson');
-            earthquakes = await response.json();
-            response = await fetch('assets/japan.json');
-            japan = await response.json();
+            let response, us_earthquakes, us_states, table;
+            response = await fetch('assets/us_earthquakes.geojson');
+            us_earthquakes = await response.json();
+            response = await fetch('assets/us_states.json');
+            us_states = await response.json();
 
             table = document.getElementsByTagName("table")[0];
             let row, cell1, cell2, cell3;
-            for (let i = 0; i < earthquakes.features.length; i++) {
+            for (let i = 0; i < us_earthquakes.features.length; i++) {
                 // Create an empty <tr> element and add it to the 1st position of the table:
                 row = table.insertRow(-1);
                 cell1 = row.insertCell(0);
                 cell2 = row.insertCell(1);
                 cell3 = row.insertCell(2);
-                cell1.innerHTML = earthquakes.features[i].properties.id;
-                cell2.innerHTML = earthquakes.features[i].properties.mag;
-                cell3.innerHTML = new Date(earthquakes.features[i].properties.time).toLocaleDateString(
+                cell1.innerHTML = us_earthquakes.features[i].properties.id;
+                cell2.innerHTML = us_earthquakes.features[i].properties.mag;
+                cell3.innerHTML = new Date(us_earthquakes.features[i].properties.time).toLocaleDateString(
                     "en-US");
             }
 
@@ -139,15 +144,15 @@
             //load data to the map as new layers and table on the side.
             map.on('load', function loadingData() {
 
-                map.addSource('earthquakes', {
+                map.addSource('us_earthquakes', {
                     type: 'geojson',
-                    data: earthquakes
+                    data: us_earthquakes
                 });
 
                 map.addLayer({
-                    'id': 'earthquakes-layer',
+                    'id': 'us_earthquakes-layer',
                     'type': 'circle',
-                    'source': 'earthquakes',
+                    'source': 'us_earthquakes',
                     'paint': {
                         'circle-radius': 8,
                         'circle-stroke-width': 2,
@@ -156,18 +161,18 @@
                     }
                 });
 
-
-                map.addSource('japan', {
+                // Add states layer
+                map.addSource('us_states', {
                     type: 'geojson',
-                    data: japan
+                    data: us_states
                 });
 
                 map.addLayer({
-                    'id': 'japan-layer',
+                    'id': 'us_states-layer',
                     'type': 'fill',
-                    'source': 'japan',
+                    'source': 'us_states',
                     'paint': {
-                        'fill-color': '#0080ff', // blue color fill
+                        'fill-color': '#0080ff',
                         'fill-opacity': 0.5
                     }
                 });
