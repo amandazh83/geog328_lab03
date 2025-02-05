@@ -118,7 +118,7 @@
         // Create the map object
         let map = new mapboxgl.Map({
             container: 'map', // container ID
-            style: 'mapbox://styles/mapbox/satellite-v9', // style URL
+            style: 'mapbox://styles/mapbox/light-v11', // style URL
             zoom: 5.5, // starting zoom
             center: [138, 38] // starting center
         });
@@ -168,15 +168,15 @@
                 });
 
 
-                map.addSource('japan', {
+                map.addSource('us_states', {
                     type: 'geojson',
-                    data: japan
+                    data: us_states
                 });
 
                 map.addLayer({
-                    'id': 'japan-layer',
+                    'id': 'us_states-layer',
                     'type': 'fill',
-                    'source': 'japan',
+                    'source': 'us_states',
                     'paint': {
                         'fill-color': '#0080ff', // blue color fill
                         'fill-opacity': 0.5
