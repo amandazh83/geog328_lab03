@@ -4,8 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75127931",
+        "mag": 2.68,
         "time": 1738713006270,
         "felt": null,
         "tsunami": 0
@@ -22,10 +22,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75127906",
+        "mag": 2.89,
         "time": 1738692726130,
-        "felt": null,
+        "felt": 44,
         "tsunami": 0
       },
       "geometry": {
@@ -40,10 +40,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "uu80100726",
+        "mag": 3.12,
         "time": 1738648900230,
-        "felt": null,
+        "felt": 1,
         "tsunami": 0
       },
       "geometry": {
@@ -58,8 +58,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "ci40179354",
+        "mag": 3.08,
         "time": 1738645009640,
         "felt": null,
         "tsunami": 0
@@ -76,10 +76,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "ew1738630510",
+        "mag": 3.44,
         "time": 1738630502510,
-        "felt": null,
+        "felt": 3,
         "tsunami": 0
       },
       "geometry": {
@@ -94,10 +94,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pb4c",
+        "mag": 2.8,
         "time": 1738623504885,
-        "felt": null,
+        "felt": 39,
         "tsunami": 0
       },
       "geometry": {
@@ -112,10 +112,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "se60597816",
+        "mag": 3.06,
         "time": 1738616692850,
-        "felt": null,
+        "felt": 848,
         "tsunami": 0
       },
       "geometry": {
@@ -130,8 +130,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "tx2025cjwx",
+        "mag": 2.5,
         "time": 1738615937859,
         "felt": null,
         "tsunami": 0
@@ -148,8 +148,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pb35",
+        "mag": 2.9,
         "time": 1738614980466,
         "felt": null,
         "tsunami": 0
@@ -166,8 +166,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pb0k",
+        "mag": 2.8,
         "time": 1738589697811,
         "felt": null,
         "tsunami": 0
@@ -184,10 +184,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pay1",
+        "mag": 3,
         "time": 1738559014965,
-        "felt": null,
+        "felt": 12,
         "tsunami": 0
       },
       "geometry": {
@@ -202,10 +202,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "ci40178666",
+        "mag": 2.77,
         "time": 1738553415170,
-        "felt": null,
+        "felt": 98,
         "tsunami": 0
       },
       "geometry": {
@@ -220,10 +220,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pawf",
+        "mag": 2.5,
         "time": 1738541529795,
-        "felt": null,
+        "felt": 5,
         "tsunami": 0
       },
       "geometry": {
@@ -238,10 +238,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "ci40178306",
+        "mag": 3.35,
         "time": 1738490362060,
-        "felt": null,
+        "felt": 1,
         "tsunami": 0
       },
       "geometry": {
@@ -256,8 +256,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75126906",
+        "mag": 2.59,
         "time": 1738458246000,
         "felt": null,
         "tsunami": 0
@@ -274,10 +274,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nn00892864",
+        "mag": 3.2,
         "time": 1738450472037,
-        "felt": null,
+        "felt": 2,
         "tsunami": 0
       },
       "geometry": {
@@ -292,8 +292,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75126741",
+        "mag": 2.5,
         "time": 1738421197470,
         "felt": null,
         "tsunami": 0
@@ -310,8 +310,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pan1",
+        "mag": 2.6,
         "time": 1738420717249,
         "felt": null,
         "tsunami": 0
@@ -328,8 +328,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pamp",
+        "mag": 2.5,
         "time": 1738414687193,
         "felt": null,
         "tsunami": 0
@@ -346,10 +346,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75126586",
+        "mag": 2.67,
         "time": 1738390884630,
-        "felt": null,
+        "felt": 1,
         "tsunami": 0
       },
       "geometry": {
@@ -364,10 +364,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75126571",
+        "mag": 2.66,
         "time": 1738386443780,
-        "felt": null,
+        "felt": 6,
         "tsunami": 0
       },
       "geometry": {
@@ -382,10 +382,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75126421",
+        "mag": 2.65,
         "time": 1738350061300,
-        "felt": null,
+        "felt": 6,
         "tsunami": 0
       },
       "geometry": {
@@ -400,10 +400,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75126201",
+        "mag": 2.6,
         "time": 1738308032510,
-        "felt": null,
+        "felt": 1,
         "tsunami": 0
       },
       "geometry": {
@@ -418,10 +418,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "ci40176402",
+        "mag": 2.85,
         "time": 1738307550090,
-        "felt": null,
+        "felt": 58,
         "tsunami": 0
       },
       "geometry": {
@@ -436,10 +436,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "tx2025cdcz",
+        "mag": 3.6,
         "time": 1738295948676,
-        "felt": null,
+        "felt": 9,
         "tsunami": 0
       },
       "geometry": {
@@ -454,8 +454,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "ci40176210",
+        "mag": 3.39,
         "time": 1738282135410,
         "felt": null,
         "tsunami": 0
@@ -472,8 +472,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "ci40176202",
+        "mag": 3.41,
         "time": 1738281781690,
         "felt": null,
         "tsunami": 0
@@ -490,8 +490,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000pah1",
+        "mag": 2.6,
         "time": 1738277510605,
         "felt": null,
         "tsunami": 0
@@ -508,10 +508,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "tx2025cbmd",
+        "mag": 2.7,
         "time": 1738217840621,
-        "felt": null,
+        "felt": 4,
         "tsunami": 0
       },
       "geometry": {
@@ -526,10 +526,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000p9yq",
+        "mag": 4.5,
         "time": 1738207598932,
-        "felt": null,
+        "felt": 803,
         "tsunami": 0
       },
       "geometry": {
@@ -544,10 +544,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "uw62064837",
+        "mag": 2.71,
         "time": 1738182618520,
-        "felt": null,
+        "felt": 8,
         "tsunami": 0
       },
       "geometry": {
@@ -562,10 +562,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "nc75125316",
+        "mag": 2.65,
         "time": 1738175899230,
-        "felt": null,
+        "felt": 1,
         "tsunami": 0
       },
       "geometry": {
@@ -580,8 +580,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "mb90071893",
+        "mag": 2.8,
         "time": 1738169553809,
         "felt": null,
         "tsunami": 0
@@ -598,10 +598,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "tx2025bzyi",
+        "mag": 3.1,
         "time": 1738145595479,
-        "felt": null,
+        "felt": 2,
         "tsunami": 0
       },
       "geometry": {
@@ -616,8 +616,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "uw62064717",
+        "mag": 2.9,
         "time": 1738144363509,
         "felt": null,
         "tsunami": 0
@@ -634,8 +634,8 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "us7000p9t8",
+        "mag": 2.6,
         "time": 1738142508592,
         "felt": null,
         "tsunami": 0
@@ -652,10 +652,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "mb90071863",
+        "mag": 2.5,
         "time": 1738126433221,
-        "felt": null,
+        "felt": 1,
         "tsunami": 0
       },
       "geometry": {
@@ -670,10 +670,10 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "unknown",
-        "mag": 0.0,
+        "id": "uu80100206",
+        "mag": 3.74,
         "time": 1738112387660,
-        "felt": null,
+        "felt": 40,
         "tsunami": 0
       },
       "geometry": {

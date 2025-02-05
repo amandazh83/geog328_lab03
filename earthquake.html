@@ -129,7 +129,7 @@
             let response, earthquakes, japan, table;
             response = await fetch('assets/us_earthquakes.geojson');
             earthquakes = await response.json();
-            response = await fetch('assets/japan.json');
+            response = await fetch('assets/us_states.json');
             japan = await response.json();
 
             table = document.getElementsByTagName("table")[0];
