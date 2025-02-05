@@ -35,17 +35,6 @@
         }
 
         #side-panel {
-            flex-basis: 500px;
-            overflow-y: scroll;
-        }
-
-        #map {
-            height: 100%;
-            width: 100%;
-            position: relative;
-        }
-
-        #side-panel {
             position: absolute;
             top: 30px;
             right: 25px;
@@ -53,8 +42,15 @@
             max-height: 90%;
             background-color: white;
             padding: 0;
+            border-radius: 8px;
             overflow-y: scroll;
             z-index: 999;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+            position: relative;
         }
 
         button {
@@ -117,7 +113,7 @@
         let map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/light-v11', // style URL
-            zoom: 3.5, // starting zoom
+            zoom: 4.0, // starting zoom
             center: [-98.35, 39.5] // starting center
         });
 
