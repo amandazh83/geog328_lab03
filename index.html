@@ -8,13 +8,18 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
     <style>
+        /* CSS styles for the layout and components */
+
         h2 {
             text-align: center;
         }
 
-        body html {
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
         }
 
         #container {
@@ -24,34 +29,53 @@
             align-items: stretch;
         }
 
-        #table {
-            flex-basis: 500px;
+        #side-panel {
+            position: absolute;
+            top: 30px;
+            right: 25px;
+            width: 25%;
+            max-height: 90%;
+            background-color: white;
+            padding: 0;
+            border-radius: 8px;
             overflow-y: scroll;
+            z-index: 999;
         }
 
         #map {
-            flex-grow: 1;
+            height: 100%;
+            width: 100%;
+            position: relative;
         }
 
         button {
             margin-bottom: 10px;
+            margin-left: 10px;
             font-size: 16px;
         }
+
         table {
             border-collapse: collapse;
             border-spacing: 0;
             width: 100%;
-            border: 1px solid #ddd;
+            margin: 0;
         }
 
         th,
         td {
-            text-align: left;
+            text-align: center;
             padding: 16px;
+            font-size: 16px;
         }
 
         tr:nth-child(even) {
             background-color: #f2f2f2;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #side-panel {
+                display: none;
+            }
         }
     </style>
 </head>
