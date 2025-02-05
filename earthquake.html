@@ -151,37 +151,37 @@
             map.on('load', function loadingData() {
 
                 map.addSource('us_earthquakes', {
-                type: 'geojson',
-                data: us_earthquakes
-            });
+                    type: 'geojson',
+                    data: us_earthquakes
+                });
 
-            map.addLayer({
-                'id': 'us_earthquakes-layer',
-                'type': 'circle',
-                'source': 'us_earthquakes',
-                'paint': {
-                    'circle-radius': 8,
-                    'circle-stroke-width': 2,
-                    'circle-color': 'red',
-                    'circle-stroke-color': 'white'
-                }
-            });
+                map.addLayer({
+                    'id': 'us_earthquakes-layer',
+                    'type': 'circle',
+                    'source': 'us_earthquakes',
+                    'paint': {
+                        'circle-radius': 8,
+                        'circle-stroke-width': 2,
+                        'circle-color': 'red',
+                        'circle-stroke-color': 'white'
+                    }
+                });
 
-            // Add states layer
-            map.addSource('us_states', {
-                type: 'geojson',
-                data: us_states
-            });
+                // Add states layer
+                map.addSource('us_states', {
+                    type: 'geojson',
+                    data: us_states
+                });
 
-            map.addLayer({
-                'id': 'us_states-layer',
-                'type': 'fill',
-                'source': 'us_states',
-                'paint': {
-                    'fill-color': '#0080ff',
-                    'fill-opacity': 0.5
-                }
-            });
+                map.addLayer({
+                    'id': 'us_states-layer',
+                    'type': 'fill',
+                    'source': 'us_states',
+                    'paint': {
+                        'fill-color': '#0080ff',
+                        'fill-opacity': 0.5
+                    }
+                });
 
             });
 
