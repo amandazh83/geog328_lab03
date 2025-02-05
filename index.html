@@ -85,7 +85,7 @@
         async function geojsonFetch() {
 
 
-            let response = await fetch('assets/earthquakes.geojson');
+            let response = await fetch('assets/us_earthquakes.geojson');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -94,7 +94,7 @@
             let earthquakes = await response.json();
 
 
-            response = await fetch('assets/japan.json');
+            response = await fetch('assets/us_states.json');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -147,15 +147,15 @@
                 });
 
 
-                map.addSource('japan', {
+                map.addSource('us_states', {
                     type: 'geojson',
-                    data: japan
+                    data: us_states
                 });
 
                 map.addLayer({
-                    'id': 'japan-layer',
+                    'id': 'us_states-layer',
                     'type': 'fill',
-                    'source': 'japan',
+                    'source': 'us_states',
                     'paint': {
                         'fill-color': '#0080ff', // blue color fill
                         'fill-opacity': 0.5
