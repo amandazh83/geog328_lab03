@@ -22,9 +22,6 @@
         body{
             margin: 0;
             padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
         }
 
         #container {
@@ -35,7 +32,7 @@
         }
 
         #side-panel {
-            position: absolute;
+            position: fixed;
             top: 30px;
             right: 25px;
             width: 25%;
@@ -44,13 +41,11 @@
             padding: 0;
             border-radius: 9px;
             overflow-y: scroll;
-            z-index: 10;
+            z-index: 1;
         }
 
         #map {
-            height: 100%;
-            width: 100%;
-            position: relative;
+            flex-grow: 1;
         }
 
         button {
@@ -64,6 +59,7 @@
             border-spacing: 0;
             width: 100%;
             margin: 0;
+            border: 1px solid #ddd;
         }
 
         th,
